@@ -3,11 +3,13 @@ import { Layout, Radio, ConfigProvider } from "antd";
 import enUS from "antd/locale/en_US";
 import zhCN from "antd/locale/zh_CN";
 
-import { Language, LANGUAGE_MAP, LANGUAGES, TITLE_MAP } from "./constant";
+import { Language, LANGUAGE_MAP, LANGUAGES, Step, TITLE_MAP } from "./constant";
+import Steps from "./Steps";
 
-const { Header } = Layout;
+const { Header, Content } = Layout;
 
 const DefaultLanguage: Language = "English";
+const DefaultStep: Step = "collectToken";
 
 const layoutStyle: CSSProperties = {
   height: "100vh",
@@ -22,8 +24,13 @@ const headerStyle: CSSProperties = {
   alignItems: "center",
 };
 
+const contentStyle: CSSProperties = {
+  padding: 10,
+};
+
 const App = () => {
   const [language, setLanguage] = useState<Language>(DefaultLanguage);
+  const [step, setStep] = useState<Step>(DefaultStep);
 
   const renderLanguageSelector = () => {
     return (
@@ -50,6 +57,9 @@ const App = () => {
             {TITLE_MAP[language]}
             {renderLanguageSelector()}
           </Header>
+          <Content style={contentStyle}>
+            <Steps language={language} step={step} onChangeStep={setStep} />
+          </Content>
         </Layout>
       </ConfigProvider>
     </div>
