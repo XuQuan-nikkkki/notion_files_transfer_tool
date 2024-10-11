@@ -41,3 +41,14 @@ export const STEPS_COPY_MAP: { [key in Step]: LanguageToCopy } = {
     Chinese: "传输文件",
   },
 };
+
+export const CollectTokenActionCopy: { [key: string]: LanguageToCopy } = {
+  saveToken: {
+    English: "Save Token",
+    Chinese: "保存 Token",
+  },
+  clearToken: {
+    English: "Clear Token",
+    Chinese: "清空 Token",
+  },
+};

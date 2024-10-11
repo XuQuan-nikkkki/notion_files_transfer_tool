@@ -1,10 +1,11 @@
 import React, { CSSProperties, useState } from "react";
-import { Layout, Radio, ConfigProvider } from "antd";
+import { Layout, Radio, ConfigProvider, Space, Card } from "antd";
 import enUS from "antd/locale/en_US";
 import zhCN from "antd/locale/zh_CN";
 
 import { Language, LANGUAGE_MAP, LANGUAGES, Step, TITLE_MAP } from "./constant";
 import Steps from "./Steps";
+import CollectToken from "./CollectToken";
 
 const { Header, Content } = Layout;
 
@@ -49,6 +50,15 @@ const App = () => {
     );
   };
 
+  const renderStepContent = () => {
+    switch (step) {
+      case "collectToken":
+        return <CollectToken language={language} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="app">
       <ConfigProvider locale={language === "Chinese" ? zhCN : enUS}>
@@ -58,7 +68,10 @@ const App = () => {
             {renderLanguageSelector()}
           </Header>
           <Content style={contentStyle}>
-            <Steps language={language} step={step} onChangeStep={setStep} />
+            <Space direction="vertical" style={{ width: "100%" }}>
+              <Steps language={language} step={step} onChangeStep={setStep} />
+              <Card>{renderStepContent()}</Card>
+            </Space>
           </Content>
         </Layout>
       </ConfigProvider>
