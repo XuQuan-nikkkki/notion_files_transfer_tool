@@ -1,11 +1,12 @@
 import React, { CSSProperties, useState } from "react";
-import { Layout, Radio, ConfigProvider, Space, Card } from "antd";
+import { Layout, Radio, ConfigProvider, Card } from "antd";
 import enUS from "antd/locale/en_US";
 import zhCN from "antd/locale/zh_CN";
 
 import { Language, LANGUAGE_MAP, LANGUAGES, Step, TITLE_MAP } from "./constant";
 import Steps from "./Steps";
 import CollectToken from "./CollectToken";
+import VerticalSpace from "./VerticalSpace";
 
 const { Header, Content } = Layout;
 
@@ -68,10 +69,10 @@ const App = () => {
             {renderLanguageSelector()}
           </Header>
           <Content style={contentStyle}>
-            <Space direction="vertical" style={{ width: "100%" }}>
+            <VerticalSpace>
               <Steps language={language} step={step} onChangeStep={setStep} />
               <Card>{renderStepContent()}</Card>
-            </Space>
+            </VerticalSpace>
           </Content>
         </Layout>
       </ConfigProvider>
