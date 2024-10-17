@@ -1,12 +1,12 @@
 import { Input, Form, Button, Space, Divider } from "antd";
 import React, { CSSProperties } from "react";
 
-import AddNewIntegrationImg from "../assets/add_new_integration.jpg";
-import FillInDetailsImg from "../assets/fill_in_details.jpeg";
-import IntegrationCreatedPopupImg from "../assets/integration_created_popup.jpeg";
-import IntegrationCapabilitiesImg from "../assets/capabilities.jpeg";
-import ShowSecretImg from "../assets/show_secret.jpeg";
-import CopySecretImg from "../assets/copy_secret.jpeg";
+import AddNewIntegrationImg from "./assets/add_new_integration.jpg";
+import FillInDetailsImg from "./assets/fill_in_details.jpeg";
+import IntegrationCreatedPopupImg from "./assets/integration_created_popup.jpeg";
+import IntegrationCapabilitiesImg from "./assets/capabilities.jpeg";
+import ShowSecretImg from "./assets/show_secret.jpeg";
+import CopySecretImg from "./assets/copy_secret.jpeg";
 
 import { CollectTokenActionCopy, Language } from "./constant";
 import VerticalSpace from "./VerticalSpace";
