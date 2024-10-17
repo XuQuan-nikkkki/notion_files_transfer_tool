@@ -1,6 +1,13 @@
 import { Input, Form, Button, Space, Divider } from "antd";
 import React, { CSSProperties } from "react";
 
+import AddNewIntegrationImg from "../assets/add_new_integration.jpg";
+import FillInDetailsImg from "../assets/fill_in_details.jpeg";
+import IntegrationCreatedPopupImg from "../assets/integration_created_popup.jpeg";
+import IntegrationCapabilitiesImg from "../assets/capabilities.jpeg";
+import ShowSecretImg from "../assets/show_secret.jpeg";
+import CopySecretImg from "../assets/copy_secret.jpeg";
+
 import { CollectTokenActionCopy, Language } from "./constant";
 import VerticalSpace from "./VerticalSpace";
 
@@ -48,7 +55,7 @@ const CollectToken = ({ language }: Props) => {
               <img
                 alt="add new integration"
                 width={500}
-                src="../assets/add_new_integration.jpg"
+                src={AddNewIntegrationImg}
                 style={imageStyle}
               />
             </li>
@@ -62,8 +69,8 @@ const CollectToken = ({ language }: Props) => {
               </ol>
               <img
                 alt="fill in details"
-                src="../assets/fill_in_details.jpg"
                 width={800}
+                src={FillInDetailsImg}
                 style={imageStyle}
               />
             </li>
@@ -75,7 +82,7 @@ const CollectToken = ({ language }: Props) => {
               <img
                 alt="integration created popup"
                 width={300}
-                src="../assets/integration_created_popup.jpg"
+                src={IntegrationCreatedPopupImg}
                 style={imageStyle}
               />
             </li>
@@ -87,7 +94,7 @@ const CollectToken = ({ language }: Props) => {
               <img
                 alt="remain capabilities unchanged"
                 width={800}
-                src="../assets/capabilities.jpg"
+                src={IntegrationCapabilitiesImg}
                 style={imageStyle}
               />
             </li>
@@ -101,7 +108,7 @@ const CollectToken = ({ language }: Props) => {
                   <img
                     alt="click show secret"
                     width={800}
-                    src="../assets/show_secret.jpg"
+                    src={ShowSecretImg}
                     style={imageStyle}
                   />
                 </li>
@@ -112,7 +119,7 @@ const CollectToken = ({ language }: Props) => {
                   <img
                     alt="copy the secret"
                     width={800}
-                    src="../assets/copy_secret.jpg"
+                    src={CopySecretImg}
                     style={imageStyle}
                   />
                 </li>
@@ -145,7 +152,7 @@ const CollectToken = ({ language }: Props) => {
             <img
               alt="add new integration"
               width={500}
-              src="../assets/add_new_integration.jpg"
+              src={AddNewIntegrationImg}
               style={imageStyle}
             />
           </li>
@@ -161,8 +168,8 @@ const CollectToken = ({ language }: Props) => {
             </ol>
             <img
               alt="fill in details"
-              src="../assets/fill_in_details.jpg"
               width={800}
+              src={FillInDetailsImg}
               style={imageStyle}
             />
           </li>
@@ -174,7 +181,7 @@ const CollectToken = ({ language }: Props) => {
             <img
               alt="integration created popup"
               width={300}
-              src="../assets/integration_created_popup.jpg"
+              src={IntegrationCreatedPopupImg}
               style={imageStyle}
             />
           </li>
@@ -185,7 +192,7 @@ const CollectToken = ({ language }: Props) => {
             <img
               alt="remain capabilities unchanged"
               width={800}
-              src="../assets/capabilities.jpg"
+              src={IntegrationCapabilitiesImg}
               style={imageStyle}
             />
           </li>
@@ -198,7 +205,7 @@ const CollectToken = ({ language }: Props) => {
                 <img
                   alt="click show secret"
                   width={800}
-                  src="../assets/show_secret.jpg"
+                  src={ShowSecretImg}
                   style={imageStyle}
                 />
               </li>
@@ -208,7 +215,7 @@ const CollectToken = ({ language }: Props) => {
                 <img
                   alt="copy the secret"
                   width={800}
-                  src="../assets/copy_secret.jpg"
+                  src={CopySecretImg}
                   style={imageStyle}
                 />
               </li>
