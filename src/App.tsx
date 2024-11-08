@@ -6,7 +6,6 @@ import zhCN from "antd/locale/zh_CN";
 import { Language, LANGUAGE_MAP, LANGUAGES, Step, TITLE_MAP } from "./constant";
 import Steps from "./Steps";
 import CollectToken from "./CollectToken";
-import VerticalSpace from "./VerticalSpace";
 
 const { Header, Content } = Layout;
 
@@ -28,6 +27,8 @@ const headerStyle: CSSProperties = {
 
 const contentStyle: CSSProperties = {
   padding: 10,
+  display: "flex",
+  flexDirection: "column",
 };
 
 const App = () => {
@@ -69,10 +70,8 @@ const App = () => {
             {renderLanguageSelector()}
           </Header>
           <Content style={contentStyle}>
-            <VerticalSpace>
-              <Steps language={language} step={step} onChangeStep={setStep} />
-              <Card>{renderStepContent()}</Card>
-            </VerticalSpace>
+            <Steps language={language} step={step} onChangeStep={setStep} style={{ marginBottom: 10 }} />
+            <Card style={{ overflow: "auto" }} styles={{ body: { height: "100%" } }}>{renderStepContent()}</Card>
           </Content>
         </Layout>
       </ConfigProvider>

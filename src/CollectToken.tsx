@@ -9,7 +9,6 @@ import ShowSecretImg from "./assets/show_secret.jpeg";
 import CopySecretImg from "./assets/copy_secret.jpeg";
 
 import { CollectTokenActionCopy, Language } from "./constant";
-import VerticalSpace from "./VerticalSpace";
 
 const { useForm, Item: FormItem } = Form;
 
@@ -31,12 +30,19 @@ const CollectToken = ({ language }: Props) => {
   const renderInstruction = () => {
     const imageStyle: CSSProperties = {
       padding: "10px 0",
+      maxWidth: "100%"
     };
+
+    const sectionStyle: CSSProperties = {
+      overflow: "scroll",
+      maxWidth: 800,
+      marginBottom: 20
+    }
 
     if (language === "English") {
       return (
-        <section>
-          <h3>Instructions</h3>
+        <section style={sectionStyle}>
+          <h2>Instructions</h2>
           <ol>
             <li>
               Visit Notion's{" "}
@@ -132,8 +138,8 @@ const CollectToken = ({ language }: Props) => {
     }
 
     return (
-      <section>
-        <h3>操作指南</h3>
+      <section style={sectionStyle}>
+        <h2>操作指南</h2>
         <ol>
           <li>
             访问 Notion 的{" "}
@@ -228,8 +234,9 @@ const CollectToken = ({ language }: Props) => {
   };
 
   return (
-    <VerticalSpace split={<Divider />}>
+    <div className="container">
       {renderInstruction()}
+      <Divider type="vertical" style={{ height: "100%", margin: "0 24px" }} />
       <Form form={form}>
         <FormItem name="token" label="Token:" rules={[{ required: true }]}>
           <Input style={{ width: 400 }} />
@@ -245,7 +252,15 @@ const CollectToken = ({ language }: Props) => {
           </Space>
         </FormItem>
       </Form>
-    </VerticalSpace>
+      <style>
+        {`
+          .container {
+            display: flex;
+            height: 100%;
+          }
+        `}
+      </style>
+    </div>
   );
 };
 
