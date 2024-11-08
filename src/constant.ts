@@ -42,7 +42,7 @@ export const STEPS_COPY_MAP: { [key in Step]: LanguageToCopy } = {
   },
 };
 
-export const CollectSecretnActionCopy: { [key: string]: LanguageToCopy } = {
+export const CollectSecretActionCopy: { [key: string]: LanguageToCopy } = {
   saveSecret: {
     English: "Save Secret",
     Chinese: "保存 Secret",
