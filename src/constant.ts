@@ -16,7 +16,7 @@ export const TITLE_MAP: LanguageToCopy = {
 };
 
 export const STEPS = [
-  "collectToken",
+  "collectSecret",
   "selectDatabases",
   "matchProperties",
   "transferFiles",
@@ -24,9 +24,9 @@ export const STEPS = [
 export type Step = (typeof STEPS)[number];
 
 export const STEPS_COPY_MAP: { [key in Step]: LanguageToCopy } = {
-  collectToken: {
-    English: "Collect Token",
-    Chinese: "收集 Token",
+  collectSecret: {
+    English: "Collect Secret",
+    Chinese: "收集 Secret",
   },
   selectDatabases: {
     English: "Select Databases",
@@ -42,13 +42,13 @@ export const STEPS_COPY_MAP: { [key in Step]: LanguageToCopy } = {
   },
 };
 
-export const CollectTokenActionCopy: { [key: string]: LanguageToCopy } = {
-  saveToken: {
-    English: "Save Token",
-    Chinese: "保存 Token",
+export const CollectSecretnActionCopy: { [key: string]: LanguageToCopy } = {
+  saveSecret: {
+    English: "Save Secret",
+    Chinese: "保存 Secret",
   },
-  clearToken: {
-    English: "Clear Token",
-    Chinese: "清空 Token",
+  clearSecret: {
+    English: "Clear Secret",
+    Chinese: "清空 Secret",
   },
 };

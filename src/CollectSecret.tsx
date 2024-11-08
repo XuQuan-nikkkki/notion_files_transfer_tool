@@ -8,23 +8,23 @@ import IntegrationCapabilitiesImg from "./assets/capabilities.jpeg";
 import ShowSecretImg from "./assets/show_secret.jpeg";
 import CopySecretImg from "./assets/copy_secret.jpeg";
 
-import { CollectTokenActionCopy, Language } from "./constant";
+import { CollectSecretnActionCopy, Language } from "./constant";
 
 const { useForm, Item: FormItem } = Form;
 
 type Props = {
   language: Language;
 };
-const CollectToken = ({ language }: Props) => {
+const CollectSecret= ({ language }: Props) => {
   const [form] = useForm();
 
   const onSubmit = () => {
-    const token = form.getFieldValue("token");
-    console.log(token);
+    const secret = form.getFieldValue("secret");
+    console.log(secret);
   };
 
   const onClear = () => {
-    form.setFieldsValue({ token: "" });
+    form.setFieldsValue({ secret: "" });
   };
 
   const renderInstruction = () => {
@@ -238,16 +238,16 @@ const CollectToken = ({ language }: Props) => {
       {renderInstruction()}
       <Divider type="vertical" style={{ height: "100%", margin: "0 24px" }} />
       <Form form={form}>
-        <FormItem name="token" label="Token:" rules={[{ required: true }]}>
+        <FormItem name="secret" label="Secret:" rules={[{ required: true }]}>
           <Input style={{ width: 400 }} />
         </FormItem>
         <FormItem>
           <Space>
             <Button htmlType="submit" type="primary" onClick={onSubmit}>
-              {CollectTokenActionCopy.saveToken[language]}
+              {CollectSecretnActionCopy.saveSecret[language]}
             </Button>
             <Button danger onClick={onClear}>
-              {CollectTokenActionCopy.clearToken[language]}
+              {CollectSecretnActionCopy.clearSecret[language]}
             </Button>
           </Space>
         </FormItem>
@@ -264,4 +264,4 @@ const CollectToken = ({ language }: Props) => {
   );
 };
 
-export default CollectToken;
+export default CollectSecret;

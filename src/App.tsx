@@ -5,12 +5,12 @@ import zhCN from "antd/locale/zh_CN";
 
 import { Language, LANGUAGE_MAP, LANGUAGES, Step, TITLE_MAP } from "./constant";
 import Steps from "./Steps";
-import CollectToken from "./CollectToken";
+import CollectSecret from "./CollectSecret";
 
 const { Header, Content } = Layout;
 
 const DefaultLanguage: Language = "English";
-const DefaultStep: Step = "collectToken";
+const DefaultStep: Step = "collectSecret";
 
 const layoutStyle: CSSProperties = {
   height: "100vh",
@@ -54,8 +54,8 @@ const App = () => {
 
   const renderStepContent = () => {
     switch (step) {
-      case "collectToken":
-        return <CollectToken language={language} />;
+      case "collectSecret":
+        return <CollectSecret language={language} />;
       default:
         return null;
     }
